@@ -1,0 +1,80 @@
+@font-face {
+  font-family: Geist;
+  src: url(typeface/Geist.ttf) format("truetype");
+}
+
+:root {
+  --black: #000;
+  --lilac: #f4cbf6;
+  --border-radius: 4px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0px 20px;
+  background-color: var(--black);
+  font-family: Geist;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 280px;
+  background-color: var(--lilac);
+  color: var(--black);
+  padding: 24px;
+  border-radius: var(--border-radius);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+img {
+  border-radius: var(--border-radius);
+  width: 100%;
+  border: 1px solid var(--black);
+}
+
+.link-button {
+  text-align: center;
+  padding: 16px 24px;
+  background-color: var(--lilac);
+  color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.link-button:hover {
+  background-color: var(--black);
+  color: var(--lilac);
+}
