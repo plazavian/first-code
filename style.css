@@ -61,6 +61,7 @@ img {
   border-radius: var(--border-radius);
   width: 100%;
   border: 1px solid var(--black);
+  object-fit: cover;
 }
 
 .link-button {
